@@ -1,0 +1,359 @@
+/* Basic settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: #080808;
+
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span,
+footer span {
+    color: #ff2020;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff2020;
+}
+
+
+/* Hero */
+
+.hero {
+    height: 90vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 8%;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-text,
+.heading {
+    color: #ff2020;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 70px;
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ff2020;
+}
+
+.hero-text > p:not(.small-text) {
+    color: #cccccc;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+
+    background-color: #ff2020;
+
+    color: white;
+
+    padding: 14px 22px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: white;
+    color: #111;
+}
+
+
+/* About */
+
+.about {
+    padding: 100px 10%;
+
+    background-color: #101010;
+}
+
+.about h2,
+.cars h2,
+.tracks h2,
+.final h2 {
+    font-size: 45px;
+
+    margin-bottom: 25px;
+}
+
+.about h2 span,
+.cars h2 span,
+.tracks h2 span,
+.final h2 span {
+    color: #ff2020;
+}
+
+.about > p:last-child {
+    max-width: 650px;
+
+    color: #999;
+
+    line-height: 1.8;
+}
+
+
+/* Cars */
+
+.cars {
+    padding: 100px 8%;
+}
+
+.car-container {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.car-card {
+    background-color: #151515;
+
+    padding-bottom: 25px;
+
+    width: 33%;
+
+    border: 1px solid #292929;
+}
+
+.car-card:hover {
+    border-color: #ff2020;
+}
+
+.car-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.car-card h3 {
+    font-size: 22px;
+
+    margin: 20px 20px 10px;
+}
+
+.car-card p {
+    color: #888;
+
+    margin: 0 20px;
+
+    line-height: 1.6;
+}
+
+.car-card .speed {
+    color: #ff2020;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+
+/* Tracks */
+
+.tracks {
+    padding: 100px 8%;
+
+    background-color: #101010;
+}
+
+.track-container {
+    margin-top: 40px;
+}
+
+.track-card {
+    padding: 25px;
+
+    border-bottom: 1px solid #333;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.track-card h3 {
+    font-size: 18px;
+}
+
+.track-card p {
+    color: #777;
+
+    font-size: 12px;
+}
+
+.track-card:hover {
+    background-color: #151515;
+
+    color: #ff2020;
+}
+
+
+/* Final Section */
+
+.final {
+    text-align: center;
+
+    padding: 130px 20px;
+}
+
+.final h2 {
+    font-size: 55px;
+}
+
+.final > p:not(.heading) {
+    color: #888;
+
+    margin-bottom: 30px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #050505;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+}
+
+footer h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        padding: 30px;
+
+        height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .about,
+    .cars,
+    .tracks {
+        padding: 70px 25px;
+    }
+
+    .about h2,
+    .cars h2,
+    .tracks h2 {
+        font-size: 35px;
+    }
+
+    .car-container {
+        flex-direction: column;
+    }
+
+    .car-card {
+        width: 100%;
+    }
+
+    .track-card {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .final h2 {
+        font-size: 38px;
+    }
+}
