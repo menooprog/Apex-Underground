@@ -357,3 +357,12 @@ footer p {
         font-size: 38px;
     }
 }
+.creator {
+    margin-top: 12px;
+    color: #ff2020;
+    letter-spacing: 1px;
+}
+
+.creator strong {
+    color: white;
+}
